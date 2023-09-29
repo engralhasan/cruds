@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}profilSow{% endblock %} 
+{% block body%}
+
+<div class="container">
+    <div class="row">
+     <div class="col">
+       <div class="card" style="width: 18rem;">
+         <img src="{{prof.image.url}}" class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">Name : {{prof.name}}</h5>
+           <h5 class="card-title">Email : {{prof.email}}</h5>
+           <h5 class="card-title">Age : {{prof.age}}</h5>
+           <h5 class="card-title">Number : {{prof.number}}</h5>
+           <h5 class="card-title">Blood Group : {{prof.blood_group}}</h5>
+           <h5 class="card-title">Nationality : {{prof.nationality}}</h5>
+           <h5 class="card-title">Gender : {{prof.gender}}</h5>
+           <h5 class="card-title">Relegion : {{prof.relegion}}</h5>
+           <h5 class="card-title">Qualification : {{prof.qualification}}</h5>
+           <h5 class="card-title">Date of Birth : {{prof.date_of_birth}}</h5>
+           <h5 class="card-title">Father Name : {{prof.father_name}}</h5>
+           <h5 class="card-title">Mother Name : {{prof.mother_name}}</h5>
+           
+
+           <p class="card-text"><h5 class="card-title">Address : {{prof.address}}</h5>.</p>
+           <a href="{%url 'updet' prof.id%}" class="btn btn-info" style="margin-left:20px">Update</a>
+           <a href="{%url 'delete' prof.id%}" class="btn btn-danger">delete</a>
+         </div>
+       </div>
+     </div>
+     
+    </div>
+   </div><br><br>
+{% endblock%}

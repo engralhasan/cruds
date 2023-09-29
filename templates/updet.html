@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %}
+{% block body%}
+
+<div class="wrapper">
+  <section class="form signup">
+    <header> Register</header>
+    <form action="#" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="field input">
+        <label>Enter your name</label>
+        <input type="text" value="{{prof.name}}" name="lname" placeholder="Enter your name" required>
+      </div>
+
+      <div class="field input">
+        <label>Email</label>
+        <input type="email" value="{{prof.email}}" name="email" placeholder="Enter Your Email" required>
+      </div>
+
+      <div class="field input">
+        <label>Age</label>
+        <input type="text" name="age" placeholder="Enter Your age" required value="{{prof.age}}">
+      </div>
+
+
+      <div class="field input">
+        <label>Number</label>
+        <input type="text" name="number" placeholder="Enter Your number" required value="{{prof.number}}">
+      </div>
+
+      <div class="field input">
+        <label>Adress</label>
+        <input type="text" name="address" placeholder="Enter Your address" required value="{{prof.address}}">
+      </div>
+      <div class="fi">
+        <img style="height: 180px;
+        width: 180px;" src="{{prof.image.url}}" >
+      </div>
+
+      <div class="field image">
+        <label>Select Imag</label>
+        <input type="file" name="image">
+      </div>
+
+     
+
+      <div class="field input">
+        <label>Nationality</label>
+        <input type="text" name="nationality" placeholder="Enter Your nationality" required value="{{prof.nationality}}">
+      </div>
+
+
+      <div class="field input">
+        <label>Qualification</label>
+        <input type="text" name="qualification" placeholder="Enter Your qualification" required value="{{prof.qualification}}">
+      </div>
+
+      <div class="field input">
+        <label>Date Of Birth</label>
+        <input type="text" name="date" placeholder="Enter Your date_of_birth" required value="{{prof.date_of_birth}}">
+      </div>
+
+      <div class="field input">
+        <label>Father Name</label>
+        <input type="text" name="father_name" placeholder="Enter Your father_name" required value="{{prof.father_name}}">
+      </div>
+
+      <div class="field input">
+        <label>Mother Name</label>
+        <input type="text" name="mother_name" placeholder="Enter Your mother_name" required value="{{prof.mother_name}}">
+      </div>
+
+     
+
+      <div class="field button">
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+
+  </section>
+</div>
+<br><br><br>
+
+
+{% endblock %}
